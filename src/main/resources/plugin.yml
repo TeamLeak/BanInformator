@@ -1,0 +1,27 @@
+name: BanInformator
+version: '${version}'
+main: com.github.saintedlittle.BanInformator
+api-version: 1.16
+load: STARTUP
+commands:
+  upload:
+    usage: "/upload"
+    description: "Send JSON to REST!"
+    permission: "baninformer.upload"
+    permission-message: "You do not have the rights to send information from the banlist!"
+    aliases:
+      - "ud"
+  reload:
+    usage: "/ban-reload"
+    description: "Reload the configuration."
+    permission: "baninformer.reload"
+    permission-message: "You don't have the rights to manipulate the config!"
+    aliases:
+      - "brd"
+  getInformation:
+    usage: "/getInformation [playername]"
+    description: "Allows you to get information about whether a player is banned or not!"
+    permission: "baninformer.information"
+    permission-message: "You don't have rights to view whether the player is banned or not!"
+    aliases:
+      - "gn"

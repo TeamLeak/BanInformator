@@ -1,0 +1,42 @@
+# =================================================================
+# In general, there are several possibilities implemented here.
+# The first is sending data to the REST server, sending JSON.
+# The second is sending data to the console when using the command.
+# The third is a local REST that accepts requests.
+# =================================================================
+
+# ENABLED?
+Enabled: true
+
+# -------------------
+# --- INFORMATION ---
+# -------------------
+
+# The two fields below are mutually exclusive.
+# GetInfoFromBannedJson -> get information about bans from banned-players.json.
+GetInfoFromBannedJson: true
+# UseBanListener -> set a trigger that triggers when a player is banned.
+UseBanListener: false
+
+# ---------------
+# --- SHARING ---
+# ---------------
+
+# The two fields below are mutually exclusive.
+# In fact, the same thing, only JSON will be generated that will go to the server.
+UseUploadCommand: false
+
+ReturnOnGetInformationCommand: false
+
+# ------------
+# --- REST ---
+# ------------
+
+# This line is responsible for sending information to the server. Will send JSON!
+REST_URL: "https://localhost:3000/api/banlist"
+
+# It will raise its REST, which is 2-3 routes that will allow you to get information about the player if he is in the ban.
+UseREST: true
+
+# This is the port for the REST SERVER TO CONNECT TO.
+REST_PORT: 27745
